@@ -1,42 +1,59 @@
+html {
+  --s: 39px; /* control the size*/
+  --c1: #170409;
+  --c2: #67917a;
+  
+  --_g: #0000 52%,var(--c1) 54% 57%,#0000 59%; 
+  background: 
+   radial-gradient(farthest-side at -33.33% 50%,var(--_g)) 0 calc(var(--s)/2),
+   radial-gradient(farthest-side at 50% 133.33%,var(--_g)) calc(var(--s)/2) 0,
+   radial-gradient(farthest-side at 133.33% 50%,var(--_g)),
+   radial-gradient(farthest-side at 50% -33.33%,var(--_g)),
+   var(--c2);
+  background-size: calc(var(--s)/4.667) var(--s),var(--s) calc(var(--s)/4.667);
+  font-family: 'Courier New', Courier, monospace
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  width: 50%;
+  background-color: #f0f0f0;
+  padding: 10px;
   text-align: center;
+  border-radius: 200px 200px 200px 200px;
+-moz-border-radius: 200px 200px 200px 200px;
+-webkit-border-radius: 200px 200px 200px 200px;
+border: 0px solid #000000;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+footer {
+  background-color: #f0f0f0;
+  width: 100%;
+  text-align: center;
+  margin-top: 3rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+footer > a {
+  text-decoration: none; /* Remove underline */
+  color: inherit;        /* Make it inherit the text color from its parent */
+  background: none;      /* Remove any background */
+  padding: 0;            /* Remove any padding */
+  margin: 0;             /* Remove any margin */
+  border: none;          /* Remove any border */
+  outline: none;         /* Remove outline (especially for accessibility purposes) */
+  cursor: pointer;
 }

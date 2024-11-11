@@ -1,0 +1,21 @@
+.car-details-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 100px 100px 100px 100px;
+-moz-border-radius: 100px 100px 100px 100px;
+-webkit-border-radius: 100px 100px 100px 100px;
+border: 0px solid #000000;
+padding: 1rem;
+}
+
+.car-details-container > img {
+    width: 60%;
+    --mask: 
+    linear-gradient(#000 0 0) 50%/calc(100% - 44.4px) calc(100% - 44.4px) no-repeat,
+    radial-gradient(farthest-side,#000 98%,#0000) 0 0/48px 48px round;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}

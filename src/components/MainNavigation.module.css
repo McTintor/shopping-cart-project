@@ -1,0 +1,27 @@
+.header {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #f0f0f0;
+  }
+  
+  .list {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+  }
+  
+  .list a {
+    text-decoration: none;
+    color: var(--color-primary-400);
+    padding: 0;
+    border-radius: 100%;
+    font-size: larger;
+  }
+  
+  .list a:hover {
+    color: var(--color-primary-800);
+    font-weight: bold;
+    transition: ease;
+  }

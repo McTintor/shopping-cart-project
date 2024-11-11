@@ -1,0 +1,15 @@
+.cars-container {
+    width: 100%;
+}
+
+.cars-container ul {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    flex-wrap: wrap;
+    list-style-type: none;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+}
