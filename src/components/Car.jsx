@@ -2,9 +2,22 @@
 
 import './Car.css'
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { cartActions } from '../store/cart-slice';
 
 export default function Car ({ id, title, year, mileage, price, description, url }) {
     
+    const dispatch = useDispatch();
+
+    const handleAdd = () => {
+        dispatch(cartActions.increment({
+            id, 
+            price,  
+            title, 
+            totalPrice: price, 
+            url
+        }))
+    }
     
     const navigate = useNavigate();
 
@@ -27,7 +40,7 @@ export default function Car ({ id, title, year, mileage, price, description, url
                     </p>
                 <div className="car-button">
                     <p>Price: {price}€</p>
-                    <button className='add'>Add to Cart</button>
+                    <button className='add' onClick={handleAdd}>Add to Cart</button>
                 </div>
             </div>
         </>

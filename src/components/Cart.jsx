@@ -1,12 +1,17 @@
-import { DUMMY_CARS } from "../DUMMY_CARS"
 import './Cart.css'
+import { useSelector } from 'react-redux'
+import CartItem from './CartItem';
 
 export default function Cart () {
+
+    const Cars = useSelector((state) => state.cart.cars);
+    const cartTotalPrice = useSelector((state) => state.cart.cartTotal)
+
     return (
         <>
             <div className="cart-container">
                 <h2>Your Items:</h2>
-                <div className="cart-info">
+                    <div className="cart-info">
                     <div className="space width"></div>
                     <p className="width">Car</p>
                     <p className="width">Price</p>
@@ -14,79 +19,10 @@ export default function Cart () {
                     <p className="width">Total Cost</p>
                     <div className="space width"></div>
                 </div>
-                <div className="cart-item">
-                        <img  className="width" src={DUMMY_CARS[0].url} alt="Car 1" />
-                        <p className="width">{DUMMY_CARS[0].title}</p>
-                        <p className="width">{DUMMY_CARS[0].price}€</p>
-                        <div className="item-amount width">
-                            <button className="amount-btn">➕ </button>
-                            <p> 11111 </p>
-                            <button className="amount-btn"> ➖</button>
-                        </div>
-                        <p className="width">total</p>
-                        <span className="width"><button className="delete width">Delete 🗑️</button></span>
-                </div>
-                <div className="cart-item">
-                        <img  className="width" src={DUMMY_CARS[0].url} alt="Car 1" />
-                        <p className="width">{DUMMY_CARS[0].title}</p>
-                        <p className="width">{DUMMY_CARS[0].price}€</p>
-                        <div className="item-amount width">
-                            <button className="amount-btn">➕ </button>
-                            <p> 11111 </p>
-                            <button className="amount-btn"> ➖</button>
-                        </div>
-                        <p className="width">total</p>
-                        <span className="width"><button className="delete width">Delete 🗑️</button></span>
-                </div>
-                <div className="cart-item">
-                        <img  className="width" src={DUMMY_CARS[0].url} alt="Car 1" />
-                        <p className="width">{DUMMY_CARS[0].title}</p>
-                        <p className="width">{DUMMY_CARS[0].price}€</p>
-                        <div className="item-amount width">
-                            <button className="amount-btn">➕ </button>
-                            <p> 11111 </p>
-                            <button className="amount-btn"> ➖</button>
-                        </div>
-                        <p className="width">total</p>
-                        <span className="width"><button className="delete width">Delete 🗑️</button></span>
-                </div>
-                <div className="cart-item">
-                        <img  className="width" src={DUMMY_CARS[0].url} alt="Car 1" />
-                        <p className="width">{DUMMY_CARS[0].title}</p>
-                        <p className="width">{DUMMY_CARS[0].price}€</p>
-                        <div className="item-amount width">
-                            <button className="amount-btn">➕ </button>
-                            <p> 11111 </p>
-                            <button className="amount-btn"> ➖</button>
-                        </div>
-                        <p className="width">total</p>
-                        <span className="width"><button className="delete width">Delete 🗑️</button></span>
-                </div>
-                <div className="cart-item">
-                        <img  className="width" src={DUMMY_CARS[0].url} alt="Car 1" />
-                        <p className="width">{DUMMY_CARS[0].title}</p>
-                        <p className="width">{DUMMY_CARS[0].price}€</p>
-                        <div className="item-amount width">
-                            <button className="amount-btn">➕ </button>
-                            <p> 11111 </p>
-                            <button className="amount-btn"> ➖</button>
-                        </div>
-                        <p className="width">total</p>
-                        <span className="width"><button className="delete width">Delete 🗑️</button></span>
-                </div>
-                <div className="cart-item">
-                        <img  className="width" src={DUMMY_CARS[0].url} alt="Car 1" />
-                        <p className="width">{DUMMY_CARS[0].title}</p>
-                        <p className="width">{DUMMY_CARS[0].price}€</p>
-                        <div className="item-amount width">
-                            <button className="amount-btn">➕ </button>
-                            <p> 11111 </p>
-                            <button className="amount-btn"> ➖</button>
-                        </div>
-                        <p className="width">total</p>
-                        <span className="width"><button className="delete width">Delete 🗑️</button></span>
-                </div>
-                <div className="total"><h3>Total: total</h3></div>
+                {Cars.map((car) => (
+                    <CartItem key={car.id} id={car.id} title={car.title} price={car.price} amount={car.amount} totalPrice={car.totalPrice}/>
+                ))}
+                <div className="total"><h3>Cart Total: {cartTotalPrice} €</h3></div>
                 <div className="to-checkout">Proceed to Checkout: <button className="ok">OK</button></div>
             </div>
         </>

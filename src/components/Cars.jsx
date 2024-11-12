@@ -2,6 +2,7 @@ import Car from "./Car";
 import './Cars.css'
 import { DUMMY_CARS } from '../DUMMY_CARS'
 
+
 export default function Cars() {
     return (
         <>
