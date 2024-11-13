@@ -3,7 +3,7 @@
 Simple store app made in React implementing React Redux(toolkit) and Router in order to expand my knowledge in those areas.
 This project allows users to look through a variety of different cars and buy them by placing them in a cart and later confirming the order.
 
-Live version here: 
+Live version here: https://mctintor-car-salon.netlify.app/
 
 ## Features:
 
