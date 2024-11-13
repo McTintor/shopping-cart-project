@@ -39,6 +39,13 @@ const cartSlice =  createSlice({
             state.totalQuantity--;
             state.cartTotal -= existingCar.price;
         },
+        deleteCar(state, action) {
+            const id = action.payload;
+            const targetCar = state.cars.find(car => car.id === id);
+            state.totalQuantity = state.totalQuantity - targetCar.amount;
+            state.cartTotal = state.cartTotal - targetCar.totalPrice;
+            state.cars = state.cars.filter(car => car.id !== id);
+        }
     }
 });
 

@@ -21,6 +21,10 @@ export default function CartItem ({ id, url, title, price, amount, totalPrice}) 
         dispatch(cartActions.decrement(id))
     }
 
+    const handleDelete = () => {
+        dispatch(cartActions.deleteCar(id))
+    }
+
     return (
         <>
                 <div className="cart-item">
@@ -33,7 +37,7 @@ export default function CartItem ({ id, url, title, price, amount, totalPrice}) 
                             <button className="amount-btn" onClick={handleDecrease}> ➖</button>
                         </div>
                         <p className="width">{totalPrice} €</p>
-                        <span className="width"><button className="delete width">Delete 🗑️</button></span>
+                        <span className="width"><button onClick={handleDelete} className="delete width">Delete 🗑️</button></span>
                 </div> 
         </>
     )
