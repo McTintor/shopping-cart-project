@@ -45,6 +45,11 @@ const cartSlice =  createSlice({
             state.totalQuantity = state.totalQuantity - targetCar.amount;
             state.cartTotal = state.cartTotal - targetCar.totalPrice;
             state.cars = state.cars.filter(car => car.id !== id);
+        },
+        clearCart(state) {
+            state.cars = [];
+            state.totalQuantity = 0;
+            state.cartTotal = 0;
         }
     }
 });

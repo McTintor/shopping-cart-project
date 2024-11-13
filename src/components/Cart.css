@@ -58,7 +58,6 @@ box-shadow: -13px -10px 88px -14px rgba(158,169,242,1);
 .amount-btn {
     all: unset;
     cursor: pointer;
-    
 }
 
 .delete {
@@ -89,12 +88,13 @@ box-shadow: -13px -10px 88px -14px rgba(158,169,242,1);
 }
 
 .ok {
+    all: unset;
+    cursor: pointer;
     background-color: rgb(186, 223, 186);
     border: none;
     font-weight: bold;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     border-radius: 2rem;
-    width: 4rem;
 }
 
 .ok:hover {

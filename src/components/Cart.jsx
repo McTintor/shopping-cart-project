@@ -1,11 +1,12 @@
 import './Cart.css'
 import { useSelector } from 'react-redux'
 import CartItem from './CartItem';
+import { Link } from 'react-router-dom';
 
 export default function Cart () {
 
     const Cars = useSelector((state) => state.cart.cars);
-    const cartTotalPrice = useSelector((state) => state.cart.cartTotal)
+    const cartTotalPrice = useSelector((state) => state.cart.cartTotal);
 
     return (
         <>
@@ -23,7 +24,7 @@ export default function Cart () {
                     <CartItem key={car.id} id={car.id} title={car.title} price={car.price} amount={car.amount} totalPrice={car.totalPrice} url={car.url}/>
                 ))}
                 <div className="total"><h3>Cart Total: {cartTotalPrice} €</h3></div>
-                <div className="to-checkout">Proceed to Checkout: <button className="ok">OK</button></div>
+                <div className="to-checkout">Proceed to Checkout: <Link className='ok' to='/checkout'>OK</Link></div>
             </div>
         </>
     )

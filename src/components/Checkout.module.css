@@ -1,0 +1,88 @@
+.auth {
+    margin: 5rem 0;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    background-color: #f0f0f0;
+  }
+  
+  .control {
+    margin-bottom: 0.5rem;
+  }
+  
+  .control label {
+    display: block;
+    color: #616161;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  
+  .control input {
+    display: block;
+    width: 20rem;
+    margin: auto;
+    border-radius: 4px;
+    padding: 0.25rem;
+    border: 1px solid #ccc;
+  }
+
+  .checkoutbuttons {
+    display: flex;
+    justify-content: space-around;  
+    margin: 2rem 0;
+  }
+
+  .checkoutback {
+    all: unset;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .checkoutback:hover {
+    background-color: rgba(75, 74, 74, 0.534);
+  }
+
+  .checkoutorder {
+    border: none;
+    background-color: rgb(195, 243, 195);
+    border-radius: 1rem;
+    font-size: 16px;
+    padding: 0 1rem;
+    margin: 0;
+    width: 10rem;
+  }
+
+  .checkoutorder:hover {
+    font-weight: 600;
+    border: 1px solid green;
+  }
+
+  .itemsol {
+    padding: 0;
+    margin: 0;
+    list-style-type: decimal;
+  }
+
+  .checkoutitem {
+    margin: 0;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.checkoutitem:hover {
+    background-color: #d4d4d4;
+}
+
+.totaldisplay {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-bottom: 5rem;
+}
+
+form > h4 {
+  margin-bottom: 4rem;
+}

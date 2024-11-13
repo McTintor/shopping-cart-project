@@ -1,9 +1,9 @@
 import Car from "./Car";
 import './Cars.css'
-import { DUMMY_CARS } from '../DUMMY_CARS'
-
+import { DUMMY_CARS } from '../DUMMY_CARS';
 
 export default function Cars() {
+
     return (
         <>
             <div className="cars-container">

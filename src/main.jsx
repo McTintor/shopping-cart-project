@@ -8,6 +8,7 @@ import HomePage from "./components/HomePage";
 import Details from './components/Details'
 import Cart from './components/Cart'
 import store from "./store";
+import Checkout from "./components/Checkout";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: "cart", element: <Cart />},
+      { path: "checkout", element: <Checkout />},
       { path: "details/:id", element: <Details />}
     ]
   }
