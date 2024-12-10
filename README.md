@@ -69,5 +69,5 @@ The application will run locally at `http://localhost:5173/`.
 ## Future Upgrades
 
 - Implement a backend in order to save order information.
-- Improve authentication.
+- Include user registration and authentication.
 - Improve styling by implementing sass.
